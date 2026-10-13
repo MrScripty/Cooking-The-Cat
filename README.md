@@ -43,6 +43,10 @@ The public manuscript SHA-256 is `168310688893ecb74194b11cb3eef9df48ce4a6bdc70e2
 
 The approved cover’s supported Library transfer remains unavailable. No substitute cover has been used. Add its exact inspected bytes to `web/assets/cooking-the-cat-cover.png` when available; `--require-cover` can enforce its presence for a later build.
 
-The checked-in `docs/` directory is ready for GitHub Pages on `main`. Activation is pending because the connected integration's Pages creation request returned `Resource not accessible by integration (HTTP 403)`. The repository owner can enable it under **Settings → Pages → Build and deployment → Deploy from a branch**, selecting **main** and **/docs**, then saving. No custom domain or additional application service is required.
+GitHub Pages publishes the checked-in `docs/` directory from `main`:
+
+- [Read the web book](https://mrscripty.github.io/Cooking-The-Cat/)
+- [Download the PDF](https://mrscripty.github.io/Cooking-The-Cat/downloads/cooking-the-cat.pdf)
+- [Download the Markdown](https://mrscripty.github.io/Cooking-The-Cat/downloads/cooking-the-cat.md)
 
 The owner-provided Apache License 2.0 is preserved in `LICENSE`. References do not expand the licenses of third-party works.
