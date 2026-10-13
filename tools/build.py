@@ -90,7 +90,7 @@ def shell(title, path, body, current=None, sidebar=False):
     canonical = f'<link rel="canonical" href="{escape(ARGS.public_base.rstrip("/") + "/" + path)}">' if ARGS.public_base else ''
     source = f'<a href="{escape(ARGS.source_repository)}">Source</a>' if ARGS.source_repository else ''
     return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark light"><meta name="description" content="{escape(MANIFEST['subtitle'])}"><title>{escape(title)} · Cooking the Cat</title>{canonical}<link rel="stylesheet" href="{pre}{CSS}"><script src="{pre}{JS}" defer></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="{escape(MANIFEST['subtitle'])}"><title>{escape(title)} · Cooking the Cat</title>{canonical}<link rel="stylesheet" href="{pre}{CSS}"><script src="{pre}{JS}" defer></script></head>
 <body data-search-index="{pre}search-index.json" data-book-root="{pre}"><a class="skip-link" href="#main">Skip to reading</a>
 <header class="site-header"><a class="wordmark" href="{pre or './'}">Cooking the Cat <span>PUMA</span></a><nav aria-label="Reading tools"><a href="{pre}#contents">Contents</a><a href="{pre}read/">Read in one page</a><button class="search-open" type="button" hidden>Search</button></nav></header>
 <div class="page-shell{' reader-shell' if sidebar else ''}">{aside}<main id="main" tabindex="-1">{body}</main></div>
