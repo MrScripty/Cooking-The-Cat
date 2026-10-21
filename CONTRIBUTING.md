@@ -48,4 +48,3 @@ GitHub Pages publishes the checked-in `docs/` directory from `main`:
 - [Download the Markdown](https://mrscripty.github.io/Cooking-The-Cat/downloads/cooking-the-cat.md)
 
 The owner-provided Apache License 2.0 is preserved in `LICENSE`. References do not expand the licenses of third-party works.
-

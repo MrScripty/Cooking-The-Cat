@@ -23,4 +23,3 @@ The canonical public text is `manuscript/cooking-the-cat.md`. Builds verify its 
 [Contributor instructions](CONTRIBUTING.md) cover the Python static-site build, checks and optional Chromium PDF export. The website and PDF are generated from the same manuscript; readers need only a browser or PDF reader.
 
 Licensed under [Apache-2.0](LICENSE). Referenced works retain their own licenses.
-
