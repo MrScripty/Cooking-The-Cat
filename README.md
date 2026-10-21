@@ -1,52 +1,25 @@
 # Cooking the Cat
 
-An account of AI centric software development through Puma’s practical experience.
+An account of AI-centric software development through Puma's practical experience. The book follows how intent becomes a design, how agents share bounded work, and how testing, measurement and independent review turn implementation into a defensible result.
 
-A principles-focused public edition of Puma’s engineering account: six parts, 31 chapters, a preface, working vocabulary and 69 references. The manuscript is dated **2 October 2026**; the focused editorial revision was approved **13 October 2026**. Technical case studies provide supporting evidence rather than a personal project roadmap. See the edition notes for attribution and the four small reading-view corrections.
+**[Read online](https://mrscripty.github.io/Cooking-The-Cat/)** · **[Download the PDF](https://mrscripty.github.io/Cooking-The-Cat/downloads/cooking-the-cat.pdf)** · [Download Markdown](https://mrscripty.github.io/Cooking-The-Cat/downloads/cooking-the-cat.md)
 
-## Build and preview
+## Read the book
 
-Python 3.12 or later is required. The text site builds without network access after its dependencies are installed.
+The principles-focused public edition contains six parts and 31 chapters, with a preface, working vocabulary and references. Technical cases support the methods discussed throughout the book.
 
-```sh
-python -m venv .venv
-. .venv/bin/activate
-python -m pip install -r requirements.txt
-python tools/build.py --output docs --source-repository https://github.com/MrScripty/Cooking-The-Cat
-python tools/check.py --site docs
-python -m http.server 8000 --directory docs
-```
+Start with the [preface](https://mrscripty.github.io/Cooking-The-Cat/preface/), choose a chapter from the contents, or use the [continuous reading view](https://mrscripty.github.io/Cooking-The-Cat/read/) for browser Find and printing.
 
-Open `http://localhost:8000/`. Relative links support the repository’s exact `Cooking-The-Cat` Pages path. Reading and chapter navigation work without JavaScript. Search loads a local index; the continuous reading view supports browser Find and printing. There are no analytics, application backend or third-party runtime assets.
+Reading and chapter navigation work without JavaScript. Search uses a local index. The site has no analytics, application backend or third-party runtime assets.
 
-## PDF edition
+## Edition and sources
 
-The PDF is generated from the same continuous reading view. To rebuild it, install the optional dependency and make Chromium available, either through Playwright or with `--browser /path/to/chromium`:
+The manuscript is dated 2 October 2026; the focused editorial revision was approved on 13 October 2026. Historical claims and cited research have not been updated or rerun. [Edition notes](https://mrscripty.github.io/Cooking-The-Cat/edition/) explain attribution and the reading-view corrections.
 
-```sh
-python -m pip install -r requirements-pdf.txt
-python tools/export_pdf.py --site docs
-python tools/check.py --site docs
-```
+The canonical public text is `manuscript/cooking-the-cat.md`. Builds verify its full hash and section boundaries. The Markdown download preserves those bytes.
 
-The export creates the real `docs/downloads/cooking-the-cat.pdf` and adds PDF links to the reading pages only after the file exists. Rebuilding the static site removes that generated PDF; rerun the export afterward.
+## Build or contribute
 
-## Source and evidence
+[Contributor instructions](CONTRIBUTING.md) cover the Python static-site build, checks and optional Chromium PDF export. The website and PDF are generated from the same manuscript; readers need only a browser or PDF reader.
 
-- `manuscript/cooking-the-cat.md`: approved public manuscript and Markdown download source.
-- `manuscript/manifest.json`: verified section boundaries, hashes and route mapping.
-- `web/`: reading styles, local search and the optional approved cover.
-- `tools/`: static generator, checks and optional PDF export.
-- `docs/`: generated GitHub Pages site, including `.nojekyll`.
-
-The public manuscript SHA-256 is `168310688893ecb74194b11cb3eef9df48ce4a6bdc70e2ccdf33595f2d9a5c26` (`220460` bytes). Every build verifies its full hash and all 42 section hashes. The Markdown download preserves these public-manuscript bytes; reading views apply the four documented typographic or link-label corrections. Historical claims and cited research have not been updated or rerun.
-
-The approved cover’s supported Library transfer remains unavailable. No substitute cover has been used. Add its exact inspected bytes to `web/assets/cooking-the-cat-cover.png` when available; `--require-cover` can enforce its presence for a later build.
-
-GitHub Pages publishes the checked-in `docs/` directory from `main`:
-
-- [Read the web book](https://mrscripty.github.io/Cooking-The-Cat/)
-- [Download the PDF](https://mrscripty.github.io/Cooking-The-Cat/downloads/cooking-the-cat.pdf)
-- [Download the Markdown](https://mrscripty.github.io/Cooking-The-Cat/downloads/cooking-the-cat.md)
-
-The owner-provided Apache License 2.0 is preserved in `LICENSE`. References do not expand the licenses of third-party works.
+Licensed under [Apache-2.0](LICENSE). Referenced works retain their own licenses.
